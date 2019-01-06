@@ -1,5 +1,19 @@
 fun main(args: Array<String>) {
     /*
+    Part 3
+    Classes
+    */
+    val sw = Player(name = "Seng Wee")
+    sw.show()
+
+    val huat = Player(name = "Ah Huat")
+    huat.level = 99
+    huat.show()
+
+    val seng = Player(name = "Ah Seng", lives = 9, level = 7)
+    seng.show()
+
+    /*
     Part 2
     1. Conditions
     */
@@ -12,16 +26,16 @@ fun main(args: Array<String>) {
 //        println("Stil ALIVE!")
 //    }
 
-    println("How old are you: ")
-    val age = readLine()!!.toInt()
-    println("Your age is $age.")
-
-    val message: String
-    message = when {
-        age < 21 -> "You are too young to vote!"
-        age >= 100 -> "Congratulations! You are a centenarian, you are eligible to vote!"
-        else -> "You are eligible to vote in the next General Elections!"
-    }
+//    println("How old are you: ")
+//    val age = readLine()!!.toInt()
+//    println("Your age is $age.")
+//
+//    val message: String
+//    message = when {
+//        age < 21 -> "You are too young to vote!"
+//        age >= 100 -> "Congratulations! You are a centenarian, you are eligible to vote!"
+//        else -> "You are eligible to vote in the next General Elections!"
+//    }
 
 //    message = if (age < 21) {
 //        "You are too young to vote!"
@@ -31,7 +45,8 @@ fun main(args: Array<String>) {
 //        "You are eligible to vote in the next General Elections!"
 //    }
 
-    println(message)
+//    println(message)
+
     /*
     Part 1
     1. Variables and Types
