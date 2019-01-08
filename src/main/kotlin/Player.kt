@@ -8,6 +8,8 @@ class Player(val name: String, var level: Int = 1, var lives: Int = 7, var score
             No. of lives: $lives
             Level: $level
             Score: $score
+            Weapon Name: ${weapon.name.toUpperCase()}
+            Damage Inflicted: ${weapon.damageInflicted}
             """)
     }
 }

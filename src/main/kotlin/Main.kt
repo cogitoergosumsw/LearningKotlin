@@ -11,13 +11,11 @@ fun main(args: Array<String>) {
     huat.show()
 
     val seng = Player(name = "Ah Seng", lives = 9, level = 7)
+    seng.weapon = Weapon("Sword", 100)
     seng.show()
-    println("Weapon Name: " + seng.weapon.name.toUpperCase())
-    println("Damage Inflicted: ${seng.weapon.damageInflicted}")
 
-    sw.weapon = Weapon("Sword", 100)
-    println("SW's Weapon: ${sw.weapon.name}")
-
+    huat.weapon = sw.weapon
+    huat.show()
     /*
     Part 2
     1. Conditions
