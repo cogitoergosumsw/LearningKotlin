@@ -1,46 +1,73 @@
 fun main(args: Array<String>) {
     /*
+    Part 6
+    1. Inheritance
+    */
+//    val enemy = Enemy("Test Enemy", 10, 3)
+//    println(enemy)
+//
+//    enemy.takeDamage(4)
+//    println(enemy)
+//
+//    enemy.takeDamage(11)
+//    println(enemy)
+
+    val uglyTroll = Troll("Ugly Troll")
+    println(uglyTroll)
+    uglyTroll.takeDamage(30)
+    println(uglyTroll)
+
+    val vlad = Vampyre("Vlad")
+    println(vlad)
+    vlad.takeDamage(8)
+    println(vlad)
+
+    val dracula = VampyreKing("Dracula")
+    println(dracula)
+    dracula.takeDamage(12)
+
+    /*
     Part 5
     1. Encapsulation
     */
-    val sw = Player(name = "Seng Wee")
-    sw.show()
-
-    val huat = Player(name = "Ah Huat")
-    huat.level = 99
-
-    val seng = Player(name = "Ah Seng", lives = 9, level = 7)
-    seng.weapon = Weapon("Sword", 100)
-    seng.show()
-
-    huat.weapon = seng.weapon
-    huat.show()
-
-    val redPotion = Loot("Red Potion", LootType.POTION, 10.0)
-    seng.getLoot(redPotion)
-    val chestArmour = Loot("+3 Chest Armour", LootType.ARMOUR, 99.0)
-    seng.getLoot(chestArmour)
-    seng.getLoot(Loot("Ring of Protection", LootType.RING, 45.0))
-    seng.getLoot(Loot("Invisibility Potion", LootType.POTION, 30.0))
-    seng.showInventory()
-
-    if (seng.dropLoot(redPotion)) {
-        seng.showInventory()
-    } else {
-        println("You don't have a ${redPotion.name}")
-    }
-
-    val bluePotion = Loot("Blue Potion", LootType.POTION, 42.0)
-    if (seng.dropLoot(bluePotion)) {
-        seng.showInventory()
-    } else {
-        println("You don't have ${bluePotion.name}")
-    }
-    if (seng.dropLoot("Invisibility Potion")) {
-        seng.showInventory()
-    } else {
-        println("You don't have an Invisibility Potion!")
-    }
+//    val sw = Player(name = "Seng Wee")
+//    sw.show()
+//
+//    val huat = Player(name = "Ah Huat")
+//    huat.level = 99
+//
+//    val seng = Player(name = "Ah Seng", lives = 9, level = 7)
+//    seng.weapon = Weapon("Sword", 100)
+//    seng.show()
+//
+//    huat.weapon = seng.weapon
+//    huat.show()
+//
+//    val redPotion = Loot("Red Potion", LootType.POTION, 10.0)
+//    seng.getLoot(redPotion)
+//    val chestArmour = Loot("+3 Chest Armour", LootType.ARMOUR, 99.0)
+//    seng.getLoot(chestArmour)
+//    seng.getLoot(Loot("Ring of Protection", LootType.RING, 45.0))
+//    seng.getLoot(Loot("Invisibility Potion", LootType.POTION, 30.0))
+//    seng.showInventory()
+//
+//    if (seng.dropLoot(redPotion)) {
+//        seng.showInventory()
+//    } else {
+//        println("You don't have a ${redPotion.name}")
+//    }
+//
+//    val bluePotion = Loot("Blue Potion", LootType.POTION, 42.0)
+//    if (seng.dropLoot(bluePotion)) {
+//        seng.showInventory()
+//    } else {
+//        println("You don't have ${bluePotion.name}")
+//    }
+//    if (seng.dropLoot("Invisibility Potion")) {
+//        seng.showInventory()
+//    } else {
+//        println("You don't have an Invisibility Potion!")
+//    }
 
 //    println(seng)
 
