@@ -8,14 +8,18 @@ fun main(args: Array<String>) {
 
     val huat = Player(name = "Ah Huat")
     huat.level = 99
-    huat.show()
 
     val seng = Player(name = "Ah Seng", lives = 9, level = 7)
     seng.weapon = Weapon("Sword", 100)
     seng.show()
 
-    huat.weapon = sw.weapon
+    huat.weapon = seng.weapon
     huat.show()
+
+    val redPotion = Loot("Red Potion", LootType.POTION, 10.0)
+    seng.inventory.add(redPotion)
+    seng.showInventory()
+    println(seng)
     /*
     Part 2
     1. Conditions
