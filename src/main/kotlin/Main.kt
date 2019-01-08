@@ -12,6 +12,11 @@ fun main(args: Array<String>) {
 
     val seng = Player(name = "Ah Seng", lives = 9, level = 7)
     seng.show()
+    println("Weapon Name: " + seng.weapon.name.toUpperCase())
+    println("Damage Inflicted: ${seng.weapon.damageInflicted}")
+
+    sw.weapon = Weapon("Sword", 100)
+    println("SW's Weapon: ${sw.weapon.name}")
 
     /*
     Part 2
