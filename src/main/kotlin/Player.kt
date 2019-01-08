@@ -1,7 +1,7 @@
 // primary constructor - val name
 class Player(val name: String, var level: Int = 1, var lives: Int = 7, var score: Int = 0) {
     var weapon: Weapon = Weapon("Fist", 1)
-    val inventory = ArrayList<Loot>()
+    private val inventory = ArrayList<Loot>()
 
     fun show() {
         if (lives > 0) {
@@ -20,6 +20,27 @@ class Player(val name: String, var level: Int = 1, var lives: Int = 7, var score
             Weapon Name: ${weapon.name.toUpperCase()}
             Damage Inflicted: ${weapon.damageInflicted}
             """
+    }
+
+    fun getLoot(item: Loot) {
+        inventory.add(item)
+    }
+
+    fun dropLoot(item: Loot): Boolean {
+        return if (inventory.contains(item)) {
+            inventory.remove(item)
+            true
+        } else {
+            false
+        }
+    }
+
+    // new stuff
+    fun dropLoot(name: String) : Boolean {
+        println("$name will be dropped")
+        return inventory.removeIf {
+            it.name == name
+        }
     }
 
     fun showInventory() {
